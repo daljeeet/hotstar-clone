@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(200, 200, 200);
+}
+
+nav {
+    height: 80px;
+    background-color: #141b29;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+}
+
+#nav {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_left {
+    margin-left: 15px;
+    width: 42%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(200, 200, 200);
+}
+
+#hambrgerIcon {
+    height: 28px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#hambrgerIcon>div {
+    border: 1.2px solid rgb(200, 200, 200);
+    ;
+    background-color: rgb(200, 200, 200);
+    ;
+    border-radius: 2px;
+}
+
+.hotstar_img {
+    width: 120px;
+    height: 50px;
+    padding-bottom: 10px;
+    margin-right: -5px;
+}
+
+.kids_img {
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+.nav_right {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#movie_name_inp {
+    background-color: transparent;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 200px;
+    color: white;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown>p {
+    cursor: pointer;
+}
+
+#profile {
+    display: none;
+}
+
+#profile_img {
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+.dropdown-content {
+    top: 70px;
+    display: none;
+    position: absolute;
+    background-color: #141b29;
+    z-index: 1;
+    color: white;
+    height: auto;
+    min-width: 120px;
+    max-width: fit-content;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content>p {
+    width: 100%;
+    padding: 4px 0px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content>p:hover {
+    cursor: pointer;
+    background-color: #060a11;
+}
+
+#login_btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.disney {
+    cursor: pointer;
+}
+
+#login_btn:hover {
+    border: 1px solid #1f80e0;
+}
+
+#login_modal_outer {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    width: 100%;
+    display: none;
+}
+
+#login_modal_inner {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    color: white;
+    height: 450px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #0f1725;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 400px;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#login_form>input {
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #1f80e0;
+    background: none;
+    padding-left: 10px;
+    outline: none;
+    color: white;
+}
+
+#login_form>input:last-child {
+    color: #1f80e0;
+    border: 1px solid #1f80e0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#login_form>input:last-child:hover {
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+#signup_modal_inner {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    color: white;
+    height: 450px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #0f1725;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#signup_form {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 400px;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#signup_form>input {
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #1f80e0;
+    background: none;
+    padding-left: 10px;
+    outline: none;
+    color: white;
+}
+
+#signup_form>input:last-child {
+    color: #1f80e0;
+    border: 1px solid #1f80e0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#signup_form>input:last-child:hover {
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+#goto_signup {
+    text-decoration: underline;
+    color: #1f80e0;
+    cursor: pointer;
+}
+
+#goto_login {
+    text-decoration: underline;
+    color: #1f80e0;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .dropdown {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .disney {
+        display: none;
+    }
+    .nav_right {
+        display: flex;
+        justify-content: center;
+    }
+    #movie_name_inp {
+        width: 60%;
+    }
+}
